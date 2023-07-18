@@ -1,0 +1,6 @@
+MultiTasking can be achieved through MultiProcessing & MultiThreading
+
+MultiProcessing Vs MultiThreading
+
+MultiProcessing : Executing Independent Process(Programs) Simultaneously
+MultiThreading : Executing Multiple blocks in the same Program simultaneously

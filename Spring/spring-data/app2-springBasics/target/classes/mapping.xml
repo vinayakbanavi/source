@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!-- Configuring properties for custom bean class -->
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+	
+	<!-- wiring without DI  -->
+	
+	<!-- Container will create objects for each and every specified beans  -->	
+		
+	<!-- Book class beans -->
+	
+	
+
+	<bean id = "b1" class = "com.test.wiring.Book">
+		<!-- Dependency Injections : constructor  -->
+		<constructor-arg name = "title" value = "LostWorld"/>
+		<constructor-arg name = "author" value = "Aswaja"/>
+	</bean>
+
+	<bean id = "b2" class = "com.test.wiring.Book">
+		<!-- Dependency Injections : constructor  -->
+		<constructor-arg name = "title" value = "Unforgettable"/>
+		<constructor-arg name = "author" value = "Karna"/>	
+	</bean>
+	
+	
+	<!-- for autowire : byname, id must be same as the field which we are wiring  -->
+	<bean id = "book" class = "com.test.wiring.Book">
+		<!-- Dependency Injections : constructor  -->
+		<constructor-arg name = "title" value = "Unforgettable"/>
+		<constructor-arg name = "author" value = "Karna"/>		
+	</bean>
+	
+
+	<!-- Page class beans -->
+	
+	<!-- explicit autowire -->
+	<bean id = "p1" class = "com.test.wiring.Page">
+	
+		<!-- Explicitly linking Book class bean to Page class -->
+		<property name="book" ref="b1"></property>
+		
+		<property name="header" value = "Mystical Fire"></property>
+		<property name="body" value = "Fire that stops by the rain"></property>
+		<property name="footer" value = "page1"></property>
+	</bean>
+	
+	<!-- 
+		for autowire = "byType"
+		we don't need to specify property
+		the container will automatically look for leftout property in the current bean
+		and it will look for the specific Type available beans in the metadata
+		for example : (leftover property is Book book) (so container will look for bean having class as Book)	
+		when using byType is multiple beans are there for same type it will get ambiguity 	 
+	 
+	 
+	<bean id = "p2" class = "com.test.wiring.Page" autowire="byType">
+		<property name="header" value = "Chapter1 : Lost within the reality" />
+		<property name="body" value = "The day when dream appears infront of your eyes" />
+		<property name="footer" value = "page1" />
+	</bean>
+	 -->		
+	
+	<!-- 
+		for autowire = "byName"
+		we don't need to specify property
+		the container will automatically look for leftout property in the current bean
+		and it will look for the bean which is having id name same as that of the attribute
+		for example : (leftover property is book) (so container will look for bean having id as book)	
+		when using byName we don't need to bother about multiple available beans 
+		inGeneral byName having high level of preference 
+	 -->		
+	
+	<bean id = "p3" class = "com.test.wiring.Page" autowire="byName">
+		<property name="header" value = "Chapter1 : Lost within the reality" />
+		<property name="body" value = "The day when dream appears infront of your eyes" />
+		<property name="footer" value = "page1" />
+	</bean>
+</beans>

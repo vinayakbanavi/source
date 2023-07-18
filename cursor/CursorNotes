@@ -1,0 +1,55 @@
+n Cursors : 
+	Are used to iterate over the Given Collection 
+	
+	Most commonly used builtIn Cursors :
+	All are Interfaces available in java.util package
+	All these Cursors acts as a pointer to the actual Collection while in operation
+	
+	1. Enumeration.
+		- 1.0 version of the cursor
+		- Only provide read function (only once in forward direction)
+		- Allows Concurrent modifications
+		
+	    drawbacks : 
+	    - no function of remove, update, add
+		- Only legacy classes provide implementation to the enumeration.
+		- Legacy classes are the classes which were in use before collection framework
+		  Those are Properties, Dictionary, Stack, HashTable, Vector
+		- these classes return implemented object for enumeration through 
+		- function : elements();
+		
+		Enumeration functions :
+		- hasMoreElements()
+		- nextElement()
+		
+	2. Iterator. 
+		- 2.0 version of the cursor
+		- it is successor of the Enumeration
+		- Provides some Extra function which was absent in Enumeration.
+		- provides Read (only once in forward direction)
+		  		   Remove()
+		- FailFastIterator : Concurrent modifications are not allowed
+		
+		drawbacks :
+		- Multiple read is not available
+		- Update function is not available
+		- add Function is not available
+		
+		Iterator functions : 
+		- hasNext()
+		- next()
+		
+	3. ListIterator.
+		- 3.0 version of cursor
+		- Successor of Iterator
+		- Provisions for all CRUD operations
+		- Read is available in both the direction (backward read follows only if forward read is done)
+		- FailFastIterator 
+		
+		Iterator Functions :
+		- add("element") add as the fist Element after completion of the operation
+		- set("element") updates the current referring element or specific element 
+		- remove() deletes the specific element
+		- it.hasNext(), it.next()
+		- it.hasPrevious(), it.previous() 
+		

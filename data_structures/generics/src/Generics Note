@@ -1,0 +1,89 @@
+Generics Notes:
+
+----------------------------------------------------------------------------------------------------------------------------------	                              
+
+		<generic>      --> java 1.5 ( J2SE 5 ) ( parameterized types )
+		               	   Compile time type checking
+		                   avoids ClassCastException
+		         
+		              
+		 Why       	   --> reduce/eliminate the need for casting
+			               change runtime error(ClassCastException) to compile time error
+			               it deals with the type- safe objects
+			               it makes the code stable by detecting the bug at compile time
+
+----------------------------------------------------------------------------------------------------------------------------------	                              
+		                
+	     Advantages --> 
+	 
+		 1. Type safety -->
+			  We can store only single type of objects in generics.
+	          it doesn't allow to store other objects
+	        
+	          without generics we can store any type of objects
+		                    
+		 2. Type Casting is not required -->  
+		 	  with generics we dont need to type cast the object
+		      without generics we need to type cast the object
+		                                      
+		 3. Compile time checking -->
+		      With generic before adding new object it checks for Type compatibility
+              hence eliminates ClassCastException
+	                              
+	          it is far better to handle the problem at compile time than runtime
+		                              
+----------------------------------------------------------------------------------------------------------------------------------	                              
+
+		 Generic can be applied for --> 
+	       1. class
+	       2. interface
+	       3. methods
+	       
+----------------------------------------------------------------------------------------------------------------------------------	                              
+		 WildCard element --> 
+		 
+			 1. <? extends Number> --> Upper Bounded
+			  		in parameter   --> used for only some logical Operation(Access), Without modifying the Original list
+				   
+				  - ? represents WildCard element
+				  - it means any child class of number i,e  (byte, short, int, long, float, double)
+			  		              
+			 2. <?>                --> Unbounded
+			        in the case where "in" variable can be acc
+			  
+			 3. <? super Number>   --> Lower Bounded
+			  	    out parameter  --> used for modifying the original list; 
+			
+	   -->	 In case the variable used as both in and out parameter don't use WildCard
+	   		 Means when we are Accessing and modifying at the same time
+			  
+----------------------------------------------------------------------------------------------------------------------------------			  
+		   
+		     we can use wildcard as 
+		       1. Type of parameter
+	           2. field
+	           3. return type
+	           4. local variable
+	            
+		     Not allowed as 
+		       X. type argument for a generic method invocation
+		       X. generic class instance creation
+		       X. super type
+		                            
+----------------------------------------------------------------------------------------------------------------------------------			  
+
+	 	 Type Parameters --> naming conventions
+	 					 T - Type
+	 					 E - Element
+	 					 K - key
+	 					 N - Number
+	 					 V - Value
+	              
+----------------------------------------------------------------------------------------------------------------------------------			  
+
+	 The functionality of General class can be achieved without generics by specifying Datatype as Object type
+	 and using proper casting whenever required.
+	 than why we use generic?
+	 	Java Compiler does not have knowledge about the type of data actually stored in NonGen so.
+	 	Explicit casts must be employed to retrieve the stored data.
+	 	Several type mismatch errors cannot be found until runtime

@@ -1,0 +1,171 @@
+UNARY OPERATORS 
+
+Definition - an operator bringing one unit effect or change in the variable 
+
+POST UNARY OPERATION
+post way of using the operator the change or modification doesnt happens in the place of operation
+i ++  increamenting one unit
+i --    decrementing one unit
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class D 
+{
+	public static void main(String[] args) 
+	{
+		int i = 10;
+		System.out.println(i ++); //10
+		System.out.println(i);    //11
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class E 
+{
+	public static void main(String[] args) 
+	{
+		int i =5,j=20;
+		System.out.println(i ++);     //5
+		System.out.println(i);        //6
+		System.out.println(j --);     //20
+		System.out.println(j);        //19
+		System.out.println(i + j);    //(6 + 9) = 25
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ class  F 
+{
+	public static void main(String[] args) 
+	{
+		int i = 10;
+		int j = i++;
+		System.out.println(i); // 11
+		System.out.println(j); // 10
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ class  G
+{
+	public static void main(String[] args) 
+	{
+		int i = 10;
+		int j = i--;
+		System.out.println(i); // 9
+		System.out.println(j); // 10
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class H 
+{
+	public static void main(String[] args) 
+	{
+		int i = 1;
+		int j = i++ + i;
+		      // 1  + 2 //
+		System.out.println(i); //2
+		System.out.println(j); //3
+	}
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class I 
+{
+	public static void main(String[] args) 
+	{
+		int a = 10;
+		int b = a++  +  a  +  a++  +  a;
+		      // 10  +  11 +  11  +  12
+		System.out.println(a); //12
+		System.out.println(b); // 44
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class J
+{
+	public static void main(String[] args) 
+	{
+		int a = 5;
+		int b = a--  +  a  +  a--  +  a  +  a--  + a;
+		      //5    +  4  +  4    +  3  +  3    + 2 
+		System.out.println(a); // 2
+		System.out.println(b); // 21
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class K 
+{
+	public static void main(String[] args) 
+	{
+		int i = 1;
+		int j = i++  + i++  +  i++  + i;
+		      //1    + 2    +  3    + 4
+		System.out.println(i); //4
+		System.out.println(j); //10
+	}
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class  M
+{
+	public static void main(String[] args) 
+	{
+		int i = 1;
+		int j = i++  +  i  +  i++  +  i++  +  i++  +  i  +  i--  +  i  +  i++  +  i--  +  i++  +  i  +  i--  +  i++  +  i++  +  i--  +  i--  +  i;
+		      //1    +  2  +   2   +   3   +  4    +  5  +   5   +  4  +   4   +  5    +  4    +  5  +  5    +   4   +  5    +  6    +  5    +  4;
+		System.out.println(i); // 4
+		System.out.println(j); // 73
+	}
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// IMPORTANT
+class P 
+{
+	public static void main(String[] args) 
+	{
+		int i =1; 
+		i = i--; // increament will takes place in the next usage, i is reinitialized with 1 only
+		System.out.println(i); // 1
+	}
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// IMPORTANT
+class Q 
+{
+	public static void main(String[] args) 
+	{
+		int i = 1;
+		i = i++; // i++ --> 1++ --> 2 but the change takes place in the next usage,the change doesnt the current operataion
+		System.out.println(i); // 1
+	}
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// IMPORTANT
+class V 
+{
+	public static void main(String[] args) 
+	{
+		int i =1;
+		int j = ++i  +  i  +  ++i  +  i;
+		      // 2   +  2  +   3   +  3 
+		System.out.println(i); // 3
+		System.out.println(j); // 10
+	}
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                       
+							 LOGICAL OPERATORS
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+|| -----> PIPE SYMBOL RESULT WILL BE TRUE IF ANY ONE OPERAND IS TRUE
+class Z 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println(true  || true); // true  , if any one operand is true the result will be true
+		System.out.println(true  || false);// true
+		System.out.println(false || false);// false
+		System.out.println(false || true); // true
+	}
+}
+// || -->	REPRESENTS LOGICAL OR TWO PIPE SYMBOLS

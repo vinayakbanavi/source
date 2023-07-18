@@ -1,0 +1,6 @@
+line1 : returning the content of the first line for first call of readLine()
+line2 : returning the content of the second line for second call of readLine()
+line3 : returning the content of the third line for third call of readLine()
+line4 : returning the content of the fourth line for fourth call of readLine()
+/* returns null if blank line*/
+ 

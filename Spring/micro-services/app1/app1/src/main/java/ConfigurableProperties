@@ -1,0 +1,33 @@
+Configurable properties
+
+(Server application)
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+server.port=8761
+
+spring.cloud.gateway.discovery.enabled=true
+server.port=9091
+spring.application.name=ms-ec1
+
+
+@SpringBootApplication
+@EnableEurekaServer
+public class MsEsApplication {
+
+
+@SpringBootApplication
+@EnableFeignClients("com.example.msec1")
+public class MsEc1Application {
+
+
+
+package com.example.msec1;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@FeignClient(name="ms-ec2")
+public interface ProxyForEc2 {
+
+@RequestMapping("service2")
+public String test2();

@@ -1,0 +1,92 @@
+		Graphs
+		
+		Application : (Overview)
+			1. Maps
+			2. Social Networks
+			3. Delivery Network (Shortest Cyclic Path)
+			
+			
+		Basics Of Graphs
+			
+		1. Vertex
+			Every Node is called a Vertex.
+		
+		2. Edge
+			Connection between two vertex.
+				* Unidirectional                         - DIRECTED GRAPH
+				* Bidirectional/UnDirectional            - UNDIRECTED GRAPH
+				
+		3. Weight
+			Weighted   - a parameter associated with edge (time, distance, etc) 
+						 it can be Integer(-Ve , 0 , +Ve)02
+			UnWeighted -  Doesn't have any weight associated with edges
+			
+		4. Neighbors 
+			Connecting Nodes from a particular node	
+			
+		A Graph can be a combination of Edge and Weight
+		1. Directed Graph with Weight
+		2. Directed Graph without Weight
+		3. UnDirected Graph with Weight
+		4. UnDirected Graph without Weight
+		
+		
+		Storing a Graph
+		
+		Representation of a Graph in the memory	
+		* Hierarchical data Structure
+		
+			1. Adjacency List - Most Common and Efficient
+			
+			2. Adjacency Matrix
+			3. Edge List
+			4. 2D Matrix (Implicit Graph)
+		
+		1. Adjacency List
+			Is also known as List of Lists
+			Very Efficient And most common 
+			Uses Space effectively , i,e Won't use Extra Space : O(v)
+			Time Complexity to find a Neighbor : O(x)   x is the number of Neighbors   (constant time)
+			
+		2. Adjacency Matrix
+			Uses Matrix to store the data
+			Uses Extra space to store UnRequired data Also : O(v^2)  i,e (v * v matrix) 
+			Time Complexity to find a Neighbor : O(v) v is no of vertex     (linear time)
+		
+		3. Edge List
+			can be implemented by ArrayList , LinkedList ...
+			size of the Edges List will be equal to no of vertexes
+			Stores the information only once
+			preferred in algorithms to sort based on specific parameter
+			used in Minimum Spanning Tree (MST)
+			
+		4. Implicit Graph (2D matrix)
+			Uses the Data Structure already present in the given problem
+			No need to Create the Graph
+			Given DS can be a 2d Array.
+			used in problems to find a shortest path from (i, j) to (certain given coordinates)
+			Refer implicit graph in materials
+			used in Flood fill algorithm
+			
+			
+		Graph Traversals
+			1. Breadth First Search ( BFS )
+			2. Depth First Search ( DFS )
+		
+			1. BFS
+				Go to immediate neighbors first
+				indirect level order traversal 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

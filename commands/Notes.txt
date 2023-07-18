@@ -1,0 +1,62 @@
+ 
+Commands in java
+	1. java
+	2. javac  : c - compile
+	3. javap  : p - parse
+	4. javadoc
+	5. jar    : java archive
+
+javap : 
+   In order to parse members of any class files
+   syntax --> javap java.lang.System
+   	      javap java.util.ArrayList
+
+javadoc :
+   In order to generate java documentation class must be public
+   syntax --> javadoc -d ../docs A.java
+
+jar     : 
+   used to develop a jar file
+   jar and zip are almost similar.
+    
+   Need of jar :
+   	After completion of Project 
+	Generting jar file with all the class files 
+	pushing this jar file to the client
+	
+   syntax --> jar cf ../lib/abc.jar *
+   	cf - creating file 
+	* - every member in the current directory
+	. - current directory
+	.. - parent directory
+
+classPath - 
+	Using one application content in another application.
+	is java specific used for specifying files location to javac and java command
+	
+	while compiling we mustspecify the location of the class we are using in our project
+	syntax >javac -d ../classes -classpath F:\pack1\app1\classes A.java
+
+	while running the java command with classpath,
+	syntax >java -classpath F:\pack1\app1\classes 
+	java command will look for both A and B in the classpath itself while A is present in the current directory itself
+	so we need to specify current directory also
+	java command will be having two location where class files are available
+	syntax >java -classpath F:\pack1\app1\classes;. A
+
+
+	set classpath for the current command promt window
+	set classpath=D:\november-batch-dev\commands\lib\abc.jar;. 
+
+	or we can set classpath for the current user in my pc
+	go to settings/about/advancedSystemSettings/advanced/environmentvariables/user/new/
+	Variable name - classpath
+	Variable value - url of commands location/ jarlocation
+
+
+command line arguments : all the arguments must be supplied befor program executing in command line
+
+Scanner class : used to supply data dynamically while program is executing
+
+if any class is from lang package we need to import explicitly all the files will be imported by default
+if class is in any other package we need to import explicitly 

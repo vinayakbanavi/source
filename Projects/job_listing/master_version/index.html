@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Listing</title>
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="assets/jquery-3.7.0.min.js"></script>
+    <script type="module" src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="mask"></div>
+      <div class="bg"></div>
+      <div class="admin-menu">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="filter-bar">
+        <div class="inputFilters">
+          <div class="active-filters"></div>
+          <div class="search-filters">
+            <input
+              type="text"
+              name="data"
+              placeholder=""
+              spellcheck="false"
+              id="data"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="clearFilters">Clear</div>
+      </div>
+      <div class="content" id="jobs"></div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+  <div class="detail requirement-container">
+                      <div class="params">Requirements</div>
+                      <div class="values">
+                        <div class="dropdown">
+                          <div class="dropbtn" id="requirements">
+                            Requirements
+                          </div>
+                          <div class="dropdown-content" id="dropdown-content">
+                            <div class="dropdown-body">
+                              <div class="roleSelection">
+                                <div class="selectionColumn">
+                                  <div class="selectionButton">Role</div>
+                                </div>
+
+                                <div class="displayColumn">
+                                  <input
+                                    type="text"
+                                    id="roleData"
+                                    name="role"
+                                    list="role-list"
+                                    autocomplete="false"
+                                  />
+                                  <datalist id="role-list">
+                                    <option value="Frontend"></option>
+                                    <option value="Backend"></option>
+                                    <option value="Fullstack"></option>
+                                  </datalist>
+                                </div>
+                              </div>
+
+                              <div class="levelSelection">
+                                <div class="selectionColumn">
+                                  <div class="selectionButton">
+                                    Experience Level
+                                  </div>
+                                </div>
+
+                                <div class="displayColumn">
+                                  <input
+                                    type="text"
+                                    id="levelData"
+                                    name="level"
+                                    list="level-list"
+                                    autocomplete="false"
+                                  />
+                                  <datalist id="level-list">
+                                    <option value="Junior"></option>
+                                    <option value="Midweight"></option>
+                                    <option value="Senior"></option>
+                                  </datalist>
+                                </div>
+                              </div>
+                              <div class="languageSelection">
+                                <div class="selectionColumn">
+                                  <div class="selectionButton">Languages</div>
+                                </div>
+
+                                <div class="displayColumn">
+                                  <input
+                                    type="text"
+                                    id="languageData"
+                                    name="languages"
+                                    list="language-list"
+                                    autocomplete="false"
+                                  />
+                                  <datalist id="language-list">
+                                    <option value="Python"></option>
+                                    <option value="Ruby"></option>
+                                    <option value="JavaScript"></option>
+                                    <option value="HTML"></option>
+                                    <option value="CSS"></option>
+                                  </datalist>
+                                </div>
+                              </div>
+                              <div class="toolsSelection">
+                                <div class="selectionColumn">
+                                  <div class="selectionButton">Tools</div>
+                                </div>
+
+                                <div class="displayColumn">
+                                  <input
+                                    type="text"
+                                    id="toolsData"
+                                    name="tools"
+                                    list="tool-list"
+                                    autocomplete="false"
+                                  />
+                                  <datalist id="tool-list">
+                                    <option value="React"></option>
+                                    <option value="Sass"></option>
+                                    <option value="Vue"></option>
+                                    <option value="Django"></option>
+                                    <option value="RoR"></option>
+                                  </datalist>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="dropdown-controls">
+                              <div class="ok" id="requirementsSelected">Ok</div>
+                              <div class="clearAll">Clear</div>
+                              <div class="preview mobileMode">Preview</div>
+                              <div class="update">Update</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+ -->

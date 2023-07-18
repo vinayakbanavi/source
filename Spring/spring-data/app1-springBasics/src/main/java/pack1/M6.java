@@ -1,0 +1,19 @@
+package pack1;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class M6 
+{
+	public static void main(String[] args) 
+	{
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		
+		Customer obj = context.getBean("c1", Customer.class);
+		System.out.println(obj.getFirstName());
+		System.out.println(obj.getLastName());
+		
+		Address address = obj.getAddress();
+		System.out.println(address.getHouseNo());
+		System.out.println(address.getStreetName());
+	}
+}

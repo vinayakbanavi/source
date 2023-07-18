@@ -1,0 +1,1 @@
+FileWriter is class available in java.ioFileWriter can be used to write into the suplied filewrite(character content in to text file)it will edit the file content internally

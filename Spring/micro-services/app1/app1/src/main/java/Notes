@@ -1,0 +1,21 @@
+app1, app2 --> Rest Template
+app3, app4 --> OpenFeign
+
+app3 - web, openfeign
+app4 - web
+
+app5, app6, app7 --> eureka server, eureka client, open client
+
+app8, app9, app10--> eureka server, eureka client, open client, spring load balancer
+app8 - eureka server
+app9 - eureka client1 with open feign and load balancer.
+app10 - eureka client2
+
+
+Eureka server is a naming server
+
+app11, app12, app13, app14 --> OpenFeign, Eureka, LoadBalancer, ApiGateway
+app11 - Eureka server
+app12 - client1 with Open Feign and load balancer(microservice1)
+app13 - client2 (microservice2)
+app14 - api Gate way server

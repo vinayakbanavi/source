@@ -1,0 +1,40 @@
+app1, app2 --> Rest Template
+app3, app4 --> OpenFeign
+app5, app6, app7
+dependencies
+app5 - Eureka server
+app6 - eureka client, web, open feign
+app7 - eureka client, web
+Configurable properties
+
+for app5 (Server application)
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+server.port=8761
+
+spring.cloud.gateway.discovery.enabled=true
+server.port=9091
+spring.application.name=ms-ec1
+
+
+@SpringBootApplication
+@EnableEurekaServer
+public class MsEsApplication {
+
+
+@SpringBootApplication
+@EnableFeignClients("com.example.msec1")
+public class MsEc1Application {
+
+
+
+package com.example.msec1;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@FeignClient(name="ms-ec2")
+public interface ProxyForEc2 {
+
+@RequestMapping("service2")
+public String test2();

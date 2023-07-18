@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!-- Configuring properties for custom bean class -->
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+	
+	<!--
+	<bean id = "p1" class = "pack1.Person">
+		<property name="firstName" value = "abc"></property>
+		<property name="lastName" value = "xyz"></property>	
+	</bean>
+	
+	<bean id = "e1" class = "pack1.Employee">
+		<constructor-arg name = "firstName" value = "vijay"/> 
+		<constructor-arg name = "lastName" value = "setupathi"/> 
+	</bean>
+-->
+	<bean id = "s1"
+	      class = "pack1.Student" 
+	      scope = "singleton" 
+	      init-method="test1"
+	      destroy-method = "test2">
+		<property name="firstName" value = "abc"></property>
+		<property name="lastName" value = "xyz"></property>	
+	</bean>  
+	
+	<bean id = "s2"
+	      class = "pack1.Student" 
+	      scope = "prototype" >
+		<property name="firstName" value = "abc"></property>
+		<property name="lastName" value = "xyz"></property>	
+	</bean>
+	
+	
+	<bean id = "a1" class = "pack1.Address">
+		<property name="houseNo" value = "123/B"></property>
+		<property name="streetName" value = "BTM1"></property>
+	</bean>
+	
+	<bean id = "a2" class = "pack1.Address">
+		<property name="houseNo" value = "124/B"></property>
+		<property name="streetName" value = "BTM2"></property>
+	</bean>
+	
+	<!--  Explicit wiring of Address into Customer using ref attribute -->
+	<bean id = "c1" class = "pack1.Customer">
+		<property name="firstName" value = "vinayak"></property>
+		<property name="lastName" value = "banavi"></property>
+		<property name="address" ref = "a1"></property>
+	</bean>
+	
+	<!-- Auto wiring of Address into Customer using autowire attribute -->
+	<!-- autowire="byType"  will give ambiguity/Exception When more than one reference is avaialable for same type
+		<bean id = "c2" class = "pack1.Customer" autowire = "byType">
+		<property name="firstName" value = "vinayak"></property>
+		<property name="lastName" value = "banavi"></property>
+	</bean>
+	-->
+	
+	<!-- Auto wiring of Address into Customer using autowire = "byName" is always Recommended-->
+	
+		<!-- id should be same as Attribute -->
+		<bean id = "address" class = "pack1.Address">
+		<property name="houseNo" value = "100/A"></property>
+		<property name="streetName" value = "Bangalore"></property>
+	    </bean>
+		
+		<bean id = "c2" class = "pack1.Customer" autowire = "byName">
+		<property name="firstName" value = "vinayak"></property>
+		<property name="lastName" value = "banavi"></property>
+		</bean>
+		
+		<!-- Autowire will initiallize the leftover attributes with corresponding available objects -->
+		<bean id = "author" class = "pack1.Author" autowire = "constructor">
+			<constructor-arg name = "firstName" value = "vinayak"></constructor-arg>
+			<constructor-arg name = "lastName" value = "banavi"></constructor-arg>
+		</bean>
+</beans>

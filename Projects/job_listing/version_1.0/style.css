@@ -1,0 +1,513 @@
+/* ------------------------------------------------------Imports--------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
+
+/* -----------------------------------------------------Variables-------------------------------------------------------------*/
+:root {
+  --mobile-width: 85vw;
+  --mobile-height: 70vw;
+
+  --browser-width: 80vw;
+  --browser-height: 80vw;
+}
+/* ----------------------------------------------------Body Styling----------------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  background: hsl(180, 52%, 96%);
+  font-family: "League Spartan", sans-serif;
+}
+
+/* ---------------------------------------------------Header Styling---------------------------------------------------------*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  z-index: 5;
+}
+
+.mask {
+  background: url("assets/images/bg-header-desktop.svg");
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: hsl(180, 29%, 50%);
+  z-index: -1;
+}
+
+/* ----------------------------------------------------------row-------------------------------------------------------------*/
+.row {
+  margin-top: 100px;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+/* -------------------------------------------------------Filter-Bar---------------------------------------------------------*/
+
+.filter-bar {
+  width: 80vw;
+  min-height: 60px;
+  /* background: hsl(180, 52%, 96%);   */
+  background: hsl(0, 0%, 100%);
+
+  position: fixed;
+  top: 70px;
+  z-index: 10;
+
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  box-shadow: 0px 5px 20px hsla(180, 32%, 47%, 0.452);
+
+  /* padding: calc(5px + 1vw) 20px ; */
+  /* padding-bottom: 1vw; */
+
+  /* INNER ELEMENTS */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1vw;
+  padding: 1vw;
+
+  /* opacity: 0; */
+}
+
+.filter {
+  width: auto;
+  padding: none;
+  border-radius: 5px;
+  overflow: hidden;
+
+  color: hsl(180, 29%, 50%);
+  background: hsl(180, 52%, 96%);
+
+  /* margin: 1vw 1vw 0 1vw; */
+  /* -webkit-margin-collapse: collapse; */
+  /* INNER ELEMENTS */
+  display: flex;
+}
+
+.tag {
+  padding: 8px;
+  font-size: 85%;
+  font-weight: 600;
+}
+
+.clear {
+  width: 28px;
+  height: 28px;
+  background: hsl(180, 29%, 50%);
+
+  /* INNER ELEMENTS */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+
+  position: relative;
+}
+
+.cross1,
+.cross2 {
+  width: 3px;
+  height: 15px;
+  background: white;
+  transform: rotate(45deg);
+  transform-origin: center;
+  position: absolute;
+}
+.cross2 {
+  transform: rotate(-45deg);
+}
+
+.clear:hover {
+  background: hsl(180, 14%, 20%);
+}
+/* -----------------------------------------------------Content Body---------------------------------------------------------*/
+.content {
+  box-sizing: border-box;
+
+  width: 80vw;
+  height: auto;
+  margin-top: 60px;
+}
+/* -------------------------------------------------Responsive Job Container ------------------------------------------------*/
+
+.content > .job {
+  /* font-family: "League Spartan", sans-serif; */
+
+  width: 80vw;
+  /* height: max(8vw, 120px); */
+  height: 10vw;
+  background: hsl(0, 0%, 100%);
+
+  border-left: 4px solid transparent;
+
+  box-shadow: 0px 5px 20px hsla(180, 32%, 47%, 0.452);
+  box-sizing: border-box;
+
+  margin-bottom: 30px;
+
+  border-radius: 7px;
+  overflow: hidden;
+
+  display: flex;
+}
+
+/* ------------------------------------------------Job COntainer Partitions -------------------------------------------------*/
+.job > div {
+  box-sizing: border-box;
+}
+
+.job > .left {
+  width: 10vw;
+  height: 10vw;
+  /* background: rgba(0, 0, 0, 0.438); */
+
+  /* INNER ELEMENTS */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.job > .center {
+  width: calc(30vw - 2px);
+  /* background: rgba(0, 0, 0, 0.63); */
+
+  /* padding: 20px 0px; */
+
+  box-sizing: border-box;
+  padding: 5% 0;
+  padding-top: 4%;
+
+  /* INNER ELEMENTS */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.job > .right {
+  width: calc(40vw - 2px);
+  /* background: rgba(0, 0, 0, 0.534); */
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+/* ---------------------------------------------------Left/Image Container---------------------------------------------------*/
+img {
+  width: 6vw;
+  height: 6vw;
+}
+/* -------------------------------------------------Center/Details Container---------------------------------------------------*/
+
+.details > div {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  gap: 4%;
+  width: 100%;
+}
+
+.company {
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  font-size: 100%;
+}
+
+.jobStatus {
+  padding: 1.4% 3%;
+  background: hsl(180, 29%, 50%);
+  color: white;
+  position: relative;
+
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 80%;
+}
+
+.jobType {
+  padding: 1.4% 3%;
+  background: hsl(0, 0%, 0%);
+  color: white;
+
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 80%;
+}
+
+.role {
+  font-weight: 700;
+  /* font-size: 1.4em; */
+  font-size: 130%;
+  position: relative;
+  /* top: -4px; */
+  vertical-align: super;
+
+  padding-top: 2px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+
+  margin: 6px 0px 1px 0px;
+}
+
+.job-desc {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.job-desc > div {
+  /* padding: 2px 20px 2px 0px; */
+  font-weight: 500;
+  font-size: 80%;
+  color: rgba(0, 0, 0, 0.678);
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.678);
+  border-radius: 50%;
+  position: relative;
+  vertical-align: middle;
+  margin: 0px 1vw;
+}
+
+/* ---------------------------------------------------Right/Requirement Container---------------------------------------------------*/
+.data > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  display: inline-block;
+  padding: 8px 15px;
+  background: hsl(180, 52%, 96%);
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* ---------------------------------------------------------Mobile Version----------------------------------------------------------*/
+
+@media screen and (max-width: 600px) {
+  /* -------------------Header-------------------*/
+  .header {
+    background: url("assets/images/bg-header-mobile.svg");
+  }
+
+  /* -----------------Filter Bar-----------------*/
+  .filter-bar {
+    width: var(--mobile-width);
+    min-height: 60px;
+
+    flex-wrap: wrap;
+
+    padding: 3vw;
+    gap: 3vw;
+  }
+
+  .filter {
+    /* margin: 3vw 3vw 0 3vw; */
+  }
+
+  /* ---------------Content Body-----------------*/
+  .content {
+    width: var(--mobile-width);
+  }
+
+  /* ---------------Job Container----------------*/
+  .content > .job {
+    width: var(--mobile-width);
+    height: var(--mobile-height);
+
+    padding: 4vw;
+
+    flex-direction: column;
+
+    /* margin-top: 6vw; */
+    margin-bottom: 18vw;
+    overflow: visible;
+    position: relative;
+  }
+
+  /* -----------------left/Image-----------------*/
+  .job > .left {
+    width: 16vw;
+    height: 16vw;
+
+    position: absolute;
+    top: -8vw;
+    left: 4vw;
+
+    z-index: 2;
+  }
+
+  /* ---------------center/Details---------------*/
+  .job > .center,
+  .right {
+    height: 50%;
+
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  .job > .center {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+    padding-top: 8vw;
+  }
+
+  .job > .right {
+    width: 100%;
+    align-items: center;
+  }
+
+  img {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .company {
+    font-size: 4vw;
+  }
+
+  .jobStatus {
+    padding: 1.2vw 3vw 1vw 3vw;
+    font-size: 3.2vw;
+  }
+
+  .jobType {
+    padding: 1.2vw 3vw 1vw 3vw;
+    font-size: 3.2vw;
+  }
+
+  .role {
+    font-size: 4.5vw;
+  }
+
+  .job-desc > div {
+    font-size: 3.2vw;
+  }
+
+  .dot {
+    width: 1.2vw;
+    height: 1.2vw;
+  }
+
+  /* -------------right/Requirements-------------*/
+
+  .job > .right {
+    justify-content: left;
+  }
+
+  ul > li {
+    font-size: 4vw;
+    margin: 0 1.5vw 1.5vw 0;
+  }
+}
+
+/* -----------------------------------------------------------Tab Version-----------------------------------------------------------*/
+
+@media screen and (max-width: 950px) and (min-width: 600px) {
+  /* ------------------Filter Bar----------------*/
+  .filter-bar {
+    width: 80vw;
+    min-height: 60px;
+
+    flex-wrap: wrap;
+  }
+
+  /* -----------------Job Container--------------*/
+
+  .content > .job {
+    height: 16vw;
+  }
+  /* ------------------Partitions----------------*/
+
+  .job > .left {
+    width: 16vw;
+    height: 16vw;
+
+    /* INNER ELEMENTS */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center,
+  .right {
+    width: calc(42vw - 2px);
+  }
+
+  /* -----------------left/Image-----------------*/
+  img {
+    width: 8vw;
+    height: 8vw;
+  }
+  /* ---------------center/Details---------------*/
+  .job > .center {
+    padding-top: 3%;
+  }
+
+  .company {
+    font-size: 1.7vw;
+  }
+
+  .jobStatus {
+    padding: 0.5vw 1.4vw;
+    font-size: 1.4vw;
+  }
+
+  .jobType {
+    padding: 0.5vw 1.4vw;
+    font-size: 1.4vw;
+  }
+
+  .role {
+    font-size: 2.2vw;
+  }
+
+  .job-desc > div {
+    font-size: 1.4vw;
+  }
+
+  .dot {
+    width: 0.5vw;
+    height: 0.5vw;
+  }
+
+  /* -------------right/Requirements-------------*/
+
+  .job > .right {
+    justify-content: left;
+  }
+
+  ul > li {
+    font-size: 2vw;
+    margin: 0 1vw 1vw 0;
+  }
+}

@@ -1,0 +1,6 @@
+	Exception Handling
+
+	Execution will be done from top to bottom line by line
+	if in any statement any Abnormal condition
+	Exception Object Rising for abnormal condition. 
+	The Raised Error object must be handled or else flow of execution gets Terminated.

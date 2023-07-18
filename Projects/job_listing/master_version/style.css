@@ -1,0 +1,1621 @@
+/* ------------------------------------------------------Imports--------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
+
+/* -----------------------------------------------------Variables-------------------------------------------------------------*/
+:root {
+  --mobile-width: 85vw;
+  --mobile-height: 70vw;
+
+  --browser-width: 80vw;
+  --browser-height: 80vw;
+}
+/* ----------------------------------------------------Body Styling----------------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background: hsl(180, 52%, 96%);
+  font-family: "League Spartan", sans-serif;
+}
+
+/* ---------------------------------------------------Header Styling---------------------------------------------------------*/
+
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 100px;
+  top: 0;
+  z-index: 5;
+
+  display: flex;
+}
+
+.mask {
+  background: url("assets/images/bg-header-desktop.svg");
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: hsl(180, 29%, 50%);
+  z-index: -1;
+}
+
+img {
+  border-radius: 50%;
+}
+
+/*-------------------------------------------------------Admin Menu----------------------------------------------------------*/
+
+.admin-menu {
+  width: 3.5vw;
+  height: 3.5vw;
+  /* background: black; */
+
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-2vw, -50%);
+
+  box-sizing: border-box;
+
+  /* padding: 5px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.admin-menu div {
+  width: 60%;
+  height: 6%;
+  background: rgb(255, 255, 255);
+  margin-bottom: 4px;
+}
+
+.admin-menu:hover {
+  background: hsl(180, 29%, 50%);
+}
+
+/* ----------------------------------------------------------row-------------------------------------------------------------*/
+.row {
+  /* margin-top: 100px; */
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 100px;
+}
+
+/* -------------------------------------------------------Filter-Bar---------------------------------------------------------*/
+
+.filter-bar {
+  width: 80vw;
+  min-height: 60px;
+  /* background: hsl(180, 52%, 96%);   */
+  background: hsl(0, 0%, 100%);
+
+  position: fixed;
+  top: 70px;
+  z-index: 10;
+
+  border-radius: 0.6vw;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  box-shadow: 0px 5px 20px hsla(180, 32%, 47%, 0.452);
+
+  /* INNER ELEMENTS */
+  display: flex;
+  cursor: pointer;
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+
+  /* padding: 1vw; */
+
+  /* opacity: 0; */
+}
+
+.inputFilters {
+  box-sizing: border-box;
+  width: 90%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* background: black; */
+  /* position: fixed; */
+  /* left: 0; */
+
+  /* INNER ELEMENTS */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1vw;
+  padding: 1vw;
+}
+
+.clearFilters {
+  box-sizing: border-box;
+  /* background: black; */
+  /* height: 2vw; */
+  /* width: 4vw; */
+  width: 10%;
+  min-height: 100%;
+
+  /* background: rgba(0, 0, 0, 0.623); */
+  /* position: fixed; */
+  /* right: 8.5vw; */
+
+  color: hsl(180, 29%, 50%);
+  font-weight: 500;
+  font-size: 1.2vw;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-filters,
+.search-filters {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  /* background: black; */
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+.search-filters {
+  display: flex;
+  align-items: center;
+  width: 25%;
+}
+
+.search-filters > input {
+  border: none;
+  width: 100%;
+  font-size: 120%;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+}
+
+.search-filters > input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.123);
+}
+
+::placeholder {
+  font-family: "League Spartan", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 120%;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+}
+
+.filter {
+  width: auto;
+  padding: none;
+  border-radius: 5px;
+  overflow: hidden;
+
+  color: hsl(180, 29%, 50%);
+  background: hsl(180, 52%, 96%);
+
+  /* margin: 1vw 1vw 0 1vw; */
+  /* -webkit-margin-collapse: collapse; */
+  /* INNER ELEMENTS */
+  display: flex;
+}
+
+.tag {
+  height: 28px;
+  width: auto;
+
+  padding: 0 0.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* padding: 8px; */
+  font-size: 85%;
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+.clear {
+  width: 28px;
+  height: 28px;
+  background: hsl(180, 29%, 50%);
+
+  /* INNER ELEMENTS */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+
+  position: relative;
+}
+
+.cross1,
+.cross2 {
+  width: 3px;
+  height: 15px;
+  background: white;
+  transform: rotate(45deg);
+  transform-origin: center;
+  position: absolute;
+}
+.cross2 {
+  transform: rotate(-45deg);
+}
+
+.clear:hover {
+  background: hsl(180, 14%, 20%);
+}
+/* -----------------------------------------------------Content Body---------------------------------------------------------*/
+.content {
+  box-sizing: border-box;
+
+  /* padding-top: none; */
+
+  width: 100vw;
+  height: calc(100vh - 150px);
+  /* margin-top: 60px; */
+
+  position: fixed;
+  bottom: 0;
+  overflow: visible;
+  overflow-x: hidden;
+
+  padding: 2vw 0;
+}
+/* -------------------------------------------------Responsive Job Container ------------------------------------------------*/
+
+.content > .job {
+  /* font-family: "League Spartan", sans-serif; */
+
+  width: calc(80vw - 3px);
+  /* height: max(8vw, 120px); */
+  /* width: 80vw; */
+  height: 10vw;
+  background: hsl(0, 0%, 100%);
+
+  border-left: 4px solid transparent;
+
+  box-shadow: 0px 5px 20px hsla(180, 32%, 47%, 0.452);
+  box-sizing: border-box;
+
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 0;
+  border-radius: 7px;
+  overflow: hidden;
+
+  display: flex;
+
+  position: relative;
+  /* left: 3px; */
+}
+
+/* ------------------------------------------------Job COntainer Partitions -------------------------------------------------*/
+.job > div {
+  box-sizing: border-box;
+}
+
+.job > .left {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+
+  /* background: black; */
+
+  /* overflow: hidden; */
+  /* background: rgba(0, 0, 0, 0.438); */
+
+  /* INNER ELEMENTS */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.job > .center {
+  width: calc(30vw - 2px);
+  /* background: rgba(0, 0, 0, 0.63); */
+
+  /* padding: 20px 0px; */
+
+  box-sizing: border-box;
+  padding: 5% 0;
+  padding-top: 4%;
+
+  /* INNER ELEMENTS */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.job > .right {
+  width: calc(40vw - 2px);
+  /* background: rgba(0, 0, 0, 0.534); */
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+/* ---------------------------------------------------Left/Image Container---------------------------------------------------*/
+.job img {
+  width: 6vw;
+  height: 6vw;
+}
+/* -------------------------------------------------Center/Details Container---------------------------------------------------*/
+
+.details > div {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  gap: 4%;
+  width: 100%;
+}
+
+.company {
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  font-size: 100%;
+}
+
+.jobStatus {
+  padding: 1.4% 3%;
+  background: hsl(180, 29%, 50%);
+  color: white;
+  position: relative;
+
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 80%;
+}
+
+.jobType {
+  padding: 1.4% 3%;
+  background: hsl(0, 0%, 0%);
+  color: white;
+
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 80%;
+}
+
+.role {
+  font-weight: 700;
+  /* font-size: 1.4em; */
+  font-size: 130%;
+  position: relative;
+  /* top: -4px; */
+  vertical-align: super;
+
+  padding-top: 2px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+
+  margin: 6px 0px 1px 0px;
+}
+
+.job-desc {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.job-desc > div {
+  /* padding: 2px 20px 2px 0px; */
+  font-weight: 500;
+  font-size: 80%;
+  color: rgba(0, 0, 0, 0.678);
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.678);
+  border-radius: 50%;
+  position: relative;
+  vertical-align: middle;
+  margin: 0px 1vw;
+}
+
+/* ---------------------------------------------------Right/Requirement Container---------------------------------------------------*/
+.data > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  display: inline-block;
+  padding: 8px 15px;
+  background: hsl(180, 52%, 96%);
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  position: relative;
+  right: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(180, 29%, 50%); /* Color of the scrollbar handle */
+  border-radius: 5px;
+  /* Rounded corners of the scrollbar handle */
+}
+
+/* Track when the handle is being hovered */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle on hover */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+/* Track when the track is being hovered */
+::-webkit-scrollbar-track:hover {
+  background: #ddd; /* Color of the scrollbar track on hover */
+}
+
+/* ----------------------------------------Admin Panel------------------------------------------------------------------- */
+
+.display {
+  width: 100vw;
+  height: 100vh;
+  background: hsl(180, 52%, 96%);
+  z-index: 5;
+
+  position: absolute;
+  /* background: black; */
+}
+
+.fixed-container {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  /* height: 100vh; */
+
+  position: relative;
+  top: 100px;
+
+  /* background: pink; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-container {
+  width: auto;
+  height: 40vw;
+  /* background: black; */
+  /* padding: 1vw; */
+
+  display: flex;
+
+  /* background: hsl(180, 52%, 96%); */
+  background: white;
+  box-shadow: 0px 5px 20px hsla(180, 32%, 47%, 0.452);
+}
+
+.col1 {
+  width: 60vw;
+  height: 100%;
+  /* background: black; */
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  position: relative;
+}
+
+.col2 {
+  width: 20vw;
+  height: 100%;
+  box-sizing: border-box;
+
+  /* background: black; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col1 > form {
+  width: 100%;
+  height: 100%;
+}
+
+.heading {
+  width: 100%;
+  height: 10%;
+  background: hsl(180, 29%, 50%);
+  color: rgb(112, 216, 216);
+
+  font-size: 2vw;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  /* border-bottom: 2px solid rgba(0, 0, 0, 0.678); */
+}
+
+.details-scrollable {
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+form .job-details {
+  width: 100%;
+  height: 80%;
+
+  overflow-y: scroll;
+
+  /* background: black; */
+  display: flex;
+  flex-direction: column;
+  /* background: rgb(0, 0, 0); */
+}
+
+.requirementsHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 0 1vw;
+}
+
+.requirementsHeader > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  background: rgb(91, 164, 164);
+  width: 100%;
+  height: 100%;
+}
+
+.job-details .detail {
+  width: 100%;
+  height: 10.83%;
+  margin-bottom: 0;
+  /* background: teal; */
+
+  display: flex;
+
+  /* border-bottom: 1px solid rgba(105, 105, 105, 0.712); */
+}
+
+.requirement-container {
+  border-bottom: none !important;
+}
+
+.params,
+.values {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+.params {
+  font-size: 1.2vw;
+}
+.values {
+  justify-content: left;
+  padding: 0 1vw;
+}
+
+/*----------------------------------image file--------------------------------------------*/
+.file-upload {
+  position: relative;
+  overflow: hidden;
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
+
+  font-size: 1.2vw;
+
+  border: none;
+  /* padding: 0.2vw 2vw; */
+
+  height: 80%;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.file-upload > input[type="file"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload:hover {
+  background-color: hsl(180, 27%, 38%);
+}
+
+.file-selected {
+  width: 50%;
+  height: 80%;
+  /* background: black; */
+
+  padding: 0.5vw;
+  font-size: 0.9vw;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  color: black;
+}
+
+/*----------------------------------text inputs-------------------------------------*/
+.values > [type="text"] {
+  /* background: black; */
+  background: hsla(180, 10%, 47%, 0.733);
+  border: none;
+  margin: 0;
+  height: 80%;
+  width: 100%;
+
+  font-size: 1.1vw;
+
+  padding: 1vw;
+  box-sizing: border-box;
+}
+
+.values > ::placeholder {
+  margin: 0;
+  padding: 0;
+}
+
+.values > [type="text"]:focus {
+  outline: none;
+  background: hsl(180, 16%, 85%);
+}
+
+/*----------------------------------tick box-------------------------------------*/
+
+.box {
+  display: flex;
+  /* background: black; */
+
+  height: 70%;
+  width: 24%;
+  margin-right: 2%;
+  color: white;
+  background-color: hsl(180, 29%, 50%);
+
+  /* margin-right: 1%; */
+}
+
+.tagname {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1vw;
+  /* background: rgb(104, 53, 53); */
+  width: 100%;
+  height: 100%;
+}
+
+.tagname:hover {
+  background: rgba(0, 0, 0, 0.397);
+  color: white;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.controls {
+  width: 100%;
+  height: 10%;
+
+  /* background: hsla(180, 29%, 50%, 0.61); */
+  background-color: rgba(0, 0, 0, 0.829);
+  color: rgb(112, 216, 216);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1vw;
+  gap: 1vw;
+}
+
+.dropdown-controls > div,
+.controls > div {
+  width: 10%;
+  height: 70%;
+
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-container > .col2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.newJob {
+  width: 18vw;
+  height: 17vw;
+  /* background: black; */
+  background: white;
+  box-shadow: 0px 5px 20px hsla(180, 32%, 47%, 0.452);
+
+  border-left: 0.3vw solid hsl(180, 29%, 50%);
+
+  border-radius: 1vw;
+  padding: 2vw 1vw 1vw 1vw;
+  /* overflow: hidden; */
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  position: relative;
+}
+
+.newJob > .left {
+  width: 4vw;
+  height: 4vw;
+
+  border-radius: 50%;
+  padding-top: 2px;
+  background: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  z-index: 10;
+  left: 8%;
+  top: -10%;
+}
+
+.newJob img {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+}
+
+.newJob > .center,
+.newJob > .right {
+  width: 100%;
+  height: 50%;
+  /* background: rgba(0, 0, 0, 0.678); */
+  box-sizing: border-box;
+}
+
+.newJob > .center {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+}
+
+.newJob > .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newJob > .right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.newJob > .center > div {
+  display: flex;
+  width: 100%;
+  height: 25%;
+}
+
+.newJob .company {
+  font-size: 0.9vw;
+}
+
+.newJob .jobStatus {
+  /* padding: 1vw 1vw 1vw 1vw; */
+  font-size: 0.6vw;
+}
+
+.newJob .jobType {
+  font-size: 0.6vw;
+}
+.newJob .role {
+  font-size: 1.2vw;
+  padding: 0;
+  /* padding-top: 0.1vw;*/
+  padding: 1vw 0;
+  box-sizing: border-box;
+  /* margin: 6px 0px 1px 0px; */
+  margin: 0;
+}
+
+.newJob .job-desc > div {
+  font-size: 0.8vw;
+}
+
+.newJob .dot {
+  width: 0.3vw;
+  height: 0.3vw;
+}
+
+/* -------------right/Requirements-------------*/
+
+.newJob ul > li {
+  font-size: 1vw;
+  /* margin: 0 1.5vw 1.5vw 0; */
+
+  padding: 0.4vw 0.6vw;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------Mobile Version----------------------------------------------------------*/
+
+@media screen and (max-width: 600px) {
+  /* -------------------Header-------------------*/
+  .header {
+    background: url("assets/images/bg-header-mobile.svg");
+  }
+
+  /*----------------------------------------------------------Admin Menu-----------------------------------------------------------*/
+
+  .admin-menu {
+    /* width: 40px; */
+    /* height: 40px; */
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .admin-menu > div {
+    height: 7%;
+    margin-bottom: 7%;
+  }
+
+  /* -----------------Filter Bar-----------------*/
+  .filter-bar {
+    width: var(--mobile-width);
+    min-height: 60px;
+
+    display: flex;
+    padding: 0;
+  }
+
+  .inputFilters {
+    width: 80%;
+    padding: 3vw;
+  }
+
+  .clearFilters {
+    width: 20%;
+    font-size: 4vw;
+  }
+  .active-filters,
+  .search-filters {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5yvw;
+  }
+
+  .tag {
+    font-size: 4vw;
+    padding: 0 2vw;
+  }
+
+  .search-filters > input {
+    border: none;
+    width: 100%;
+    font-size: 100%;
+    color: hsl(180, 29%, 50%);
+    font-weight: 700;
+  }
+
+  /* ---------------Content Body-----------------*/
+  .content {
+    width: 100vw;
+    padding-top: 10vw;
+    margin-top: 0.5vw;
+
+    height: calc(100vh - 160px);
+  }
+
+  /* ---------------Job Container----------------*/
+  .content > .job {
+    width: var(--mobile-width);
+    height: var(--mobile-height);
+
+    padding: 4vw;
+
+    flex-direction: column;
+
+    /* margin-top: 6vw; */
+    margin-bottom: 18vw;
+    overflow: visible;
+    position: relative;
+  }
+
+  /* -----------------left/Image-----------------*/
+  .job > .left {
+    width: 16vw;
+    height: 16vw;
+
+    /* background: black; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;
+
+    position: absolute;
+    top: -8vw;
+    left: 4vw;
+
+    z-index: 2;
+  }
+
+  /* ---------------center/Details---------------*/
+  .job > .center,
+  .right {
+    height: 50%;
+
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  .job > .center {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+    padding-top: 8vw;
+  }
+
+  .job > .right {
+    width: 100%;
+    align-items: center;
+  }
+
+  .job img {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .company {
+    font-size: 4vw;
+  }
+
+  .jobStatus {
+    padding: 1.2vw 3vw 1vw 3vw;
+    font-size: 3.2vw;
+  }
+
+  .jobType {
+    padding: 1.2vw 3vw 1vw 3vw;
+    font-size: 3.2vw;
+  }
+
+  .role {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 4.5vw;
+  }
+
+  .job-desc > div {
+    font-size: 3.2vw;
+  }
+
+  .dot {
+    width: 1.2vw;
+    height: 1.2vw;
+  }
+
+  /* -------------right/Requirements-------------*/
+
+  .job > .right {
+    justify-content: left;
+  }
+
+  ul > li {
+    font-size: 4vw;
+    padding: 2vw 4vw;
+  }
+
+  /* --------------------------------------------------------Admin-Panel --------------------------------------------------------- */
+
+  .display div {
+    /* position: static; */
+  }
+
+  .display {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fixed-container {
+    width: 100vw;
+    height: auto;
+
+    flex-direction: column;
+    justify-content: start;
+
+    overflow-x: hidden;
+  }
+
+  .data-container {
+    width: 100vw;
+    /* height: auto; */
+
+    height: calc(100vh - 160px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    margin-bottom: 40px;
+  }
+
+  .data-container > .col1 {
+    width: 100vw;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    /* background-color: #000000; */
+  }
+
+  .col1 form {
+    width: 100vw;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    position: relative;
+  }
+
+  form .heading {
+    width: 50vw;
+    height: 10vw;
+
+    /* background: black; */
+    background: transparent;
+    font-size: 5vw;
+
+    position: fixed;
+    top: 50px;
+
+    transform: translate(0, -50%);
+    z-index: 10;
+  }
+
+  form .job-details {
+    width: 100vw;
+    height: auto;
+    /* padding: 2vw 0; */
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+
+  form .details-scrollable {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    gap: 2vw;
+  }
+
+  .job-details .detail {
+    width: 90vw;
+    height: 20vw;
+
+    /* background: black; */
+    /* border: none; */
+  }
+
+  .col1 .params,
+  .dropdown-body .selectionColumn {
+    font-size: 5vw;
+    color: hsl(180, 29%, 50%);
+  }
+
+  .image-input-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image-input-container > div {
+    height: 60%;
+    width: 100%;
+    font-size: 4vw;
+  }
+
+  .file-selected {
+    display: none;
+  }
+
+  input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  .values > input[type="text"],
+  .displayColumn > input[type="text"] {
+    height: 60%;
+    font-size: 4vw;
+    padding: 0 3vw;
+    background: hsla(180, 10%, 47%, 0.733);
+  }
+
+  .box-container {
+    padding: 0;
+    gap: 0;
+  }
+
+  .box {
+    margin: 0;
+    width: 50%;
+    height: 60%;
+    font-size: 4vw;
+  }
+
+  .box > label {
+    font-size: 4vw;
+  }
+
+  .job-details .detail {
+    border-bottom: none;
+  }
+  .detail.requirementsHeader {
+    /* width: 100vw; */
+    display: flex; /* display: none !important; */
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: none;
+  }
+
+  .requirementsHeader > div {
+    font-size: 4vw;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(0, 0, 0, 0.438); */
+    background: rgb(91, 164, 164);
+    color: white;
+  }
+
+  .controls {
+    height: 60px;
+    background: rgb(0, 0, 0);
+    gap: 0;
+
+    position: fixed;
+    bottom: 0;
+  }
+
+  .controls > div {
+    width: 50vw;
+    height: 100%;
+
+    background: transparent;
+
+    font-size: 4.5vw;
+  }
+
+  .controls > div:hover {
+    background-color: hsla(180, 29%, 50%, 0.562);
+    color: white;
+  }
+
+  .data-container > .col2 {
+    position: fixed;
+    background: rgb(255, 255, 255);
+    width: 100vw;
+    height: calc(100vh - 160px);
+
+    z-index: 20;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    /* display: none; */
+  }
+
+  .col2 .newJob {
+    width: 80vw;
+    height: 80vw;
+
+    padding: 8vw;
+
+    position: relative;
+    /* left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%); */
+  }
+
+  .newJob > .left {
+    /* background: black; */
+
+    left: 14%;
+    top: -3%;
+  }
+  /* 
+  .newJob > .center > div {
+    background: black;
+    height: 20%;
+  } */
+
+  .newJob img {
+    width: 18vw;
+    height: 18vw;
+
+    background: black;
+  }
+
+  .newJob .company {
+    padding-top: 3px;
+    font-size: 4vw;
+  }
+
+  .newJob .jobStatus {
+    font-size: 3vw;
+  }
+
+  .newJob .jobType {
+    font-size: 3vw;
+  }
+
+  .newJob .role {
+    font-size: 5vw;
+  }
+  .newJob .job-desc > div {
+    font-size: 3.5vw;
+  }
+
+  .newJob ul > li {
+    font-size: 4vw;
+    padding: 3vw 3vw;
+  }
+}
+
+/* -----------------------------------------------------------Tab Version-----------------------------------------------------------*/
+
+@media screen and (max-width: 950px) and (min-width: 600px) {
+  /* ------------------Filter Bar----------------*/
+  .filter-bar {
+    width: 80vw;
+    min-height: 60px;
+
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 1.8vw;
+    padding: 0 1.1vw;
+  }
+
+  .clearFilters {
+    font-size: 2vw;
+  }
+
+  /* -----------------Job Container--------------*/
+
+  .content > .job {
+    height: 16vw;
+  }
+  /* ------------------Partitions----------------*/
+
+  .job > .left {
+    width: 16vw;
+    height: 16vw;
+
+    /* INNER ELEMENTS */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center,
+  .right {
+    width: calc(42vw - 2px);
+  }
+
+  /* -----------------left/Image-----------------*/
+  .job img {
+    width: 8vw;
+    height: 8vw;
+  }
+  /* ---------------center/Details---------------*/
+  .job > .center {
+    padding-top: 3%;
+  }
+
+  .company {
+    font-size: 1.7vw;
+  }
+
+  .jobStatus {
+    padding: 0.5vw 1.4vw;
+    font-size: 1.4vw;
+  }
+
+  .jobType {
+    padding: 0.5vw 1.4vw;
+    font-size: 1.4vw;
+  }
+
+  .role {
+    font-size: 2.2vw;
+  }
+
+  .job-desc > div {
+    font-size: 1.4vw;
+  }
+
+  .dot {
+    width: 0.5vw;
+    height: 0.5vw;
+  }
+
+  /* -------------right/Requirements-------------*/
+
+  .job > .right {
+    justify-content: left;
+  }
+
+  ul > li {
+    font-size: 2vw;
+    margin: 0 1vw 1vw 0;
+  }
+
+  .admin-menu {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .data-container {
+    height: 70vw;
+    position: relative;
+  }
+
+  .col1 {
+    width: 90vw;
+  }
+
+  .col2 {
+    width: 90vw;
+    height: calc(70vw - 10% - 10%);
+    background: white;
+
+    position: absolute;
+    top: 10%;
+    overflow: hidden;
+    /* height: 50vw; */
+  }
+
+  #image-upload {
+    font-size: 2vw;
+  }
+
+  .newJob {
+    width: 35vw;
+    height: 35vw;
+
+    padding: 3vw;
+  }
+
+  .newJob .left {
+    background: black;
+
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .newJob img {
+    width: 7vw;
+    height: 7vw;
+
+    background-color: #000000;
+    /* z-index: -10; */
+  }
+
+  .newJob .company {
+    font-size: 1.5vw;
+  }
+
+  .newJob .jobStatus {
+    font-size: 1.2vw;
+  }
+
+  .newJob .jobType {
+    font-size: 1.2vw;
+  }
+
+  .newJob .role {
+    font-size: 2.4vw;
+  }
+  .newJob .job-desc > div {
+    font-size: 1.5vw;
+  }
+
+  .newJob .dot {
+    width: 0.6vw;
+    height: 0.6vw;
+  }
+
+  .newJob ul > li {
+    font-size: 1.7vw;
+    padding: 1vw 1vw;
+  }
+
+  .box > label {
+    font-size: 1.3vw;
+  }
+
+  .file-upload {
+    font-size: 1.7vw;
+    /* font-size: 1.3vw; */
+  }
+
+  .file-selected {
+    font-size: 1.7vw;
+    /* font-size: 1.4vw; */
+  }
+
+  .requirementsHeader {
+    font-size: 2vw;
+  }
+
+  .values > input[type="text"] {
+    font-size: 1.7vw;
+  }
+
+  .display > .header {
+    z-index: 15;
+  }
+
+  .controls > div {
+    width: 25%;
+    font-size: 1.7vw;
+  }
+
+  .params {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 1212px) {
+  .job > .right {
+    justify-content: left;
+  }
+}
+
+/*
+
+  Mobile Version responsiveness
+
+  form .heading {
+    display: none;
+    font-size: 6vw;
+
+    background: transparent;
+
+    width: 25%;
+
+    position: fixed;
+    top: 7%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+ */

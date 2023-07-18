@@ -1,0 +1,13 @@
+ArrayList implements List extends Collection extends Iterable
+
+1. ArrayList internally using Array to manage elements
+   In array series of memory is allocated. in the form of index. 
+   so fixed capacity must be specified before creating an array
+   
+  ----> time and space complexity. 
+  		Read  			 : O(1)
+			   			 : Random access is very quick since all the elements stored in the series of memory.
+				 
+	    Insert & remove  : O(n)
+	    	           	 : If any collection is using array internally, insert operation and remove operation is not effective.
+  							 			

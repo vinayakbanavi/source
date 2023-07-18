@@ -1,0 +1,28 @@
+					Enum (Enumeration)
+
+        - A special class containing group of constants
+        - Enums are internally implemented by class
+        - constants acts as a reference variable to the instance of that class
+        - each constants will be final static Enum class Type having object 
+        
+        - Enum can have constructor, fields , methods just like other classes
+        - Enum cannot inherit other classes or get inherited
+        - But they can implement interfaces
+	
+		- Necessity of enums
+		- When we want to store certain constants whose data will not be changed we can use  enums
+		- we can define our own data type
+		
+		- enums can be declared outside a class and also inside class
+		- when used outside we cant declare private
+		- we can declare private when used inside a class
+		- they can be final/abstract
+				
+	    for example : 
+		1. 4 suits in a deck of playing cards
+		2. planets
+		3. days of week
+		4. colors 
+		5. directions
+		6. Months
+	

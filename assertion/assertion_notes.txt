@@ -1,0 +1,55 @@
+Asserion jdk 1.4
+assert is a keyword
+can no be used by default
+by default assert statements are disabled
+we must supply vm argument in order to use
+vm arguments 
+1. enable  : -ea or -enableassertions
+2. disable : -da or -disableassertions
+
+
+enabling/disabling can be done in three different ways
+1. class wise
+	
+	enabling only in the class A 
+	classes> java -ea:A2 A1
+
+	disabling only in particular class
+	classes>java -ea -da:A2 A2
+
+	any number of con=mbination is possible
+	classes>java -ea:pack1... -ea:pack2... A
+	
+
+2. packages and its sub packages
+	enables assertion for packages and subpackages
+	classes> java -ea:pack1... A1
+
+	enabling everywhere in the classes except pack1
+	classes> java -ea -da:pack1... A1
+	
+	disables assertion for entire execution
+	classes> java -da A1
+
+3. execution wise
+	enables assertion for entire execution
+	classes> java -ea A1
+	
+	disables assertion for entire execution
+	classes> java -da A1
+
+
+Inappropriate usage of assert statement
+
+- Usage of assert in the public method argument
+
+- getting side effects through assert
+
+
+difference between throw and assert
+
+sl/no   throw                               assert  
+1.      Execute by default                  by default disabled
+2.      should be the last statement        can be anywhere
+3.      we can throw specific class         by default only AssertionException 
+	Exception error

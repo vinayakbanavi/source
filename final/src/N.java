@@ -1,0 +1,13 @@
+class N
+{
+	final int i = 10;
+	
+	{
+		i = 10;
+	}
+	
+	public static void main(String[] args) 
+	{
+		System.out.println("done");
+	}
+}

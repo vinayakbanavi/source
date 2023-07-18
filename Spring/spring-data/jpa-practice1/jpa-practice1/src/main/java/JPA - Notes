@@ -1,0 +1,62 @@
+ --->	JPA dependencies : Spring Web, Spring Data JPA, H2 DataBase
+ 		
+ --->	Application properties :
+ 		1.  For H2 database
+ 			server.port=9090
+ 			spring.datasource.url=jdbc:h2:mem:testdb
+ 			spring.h2.console.enabled=true
+ 			spring.jpa.show-sql=true
+ 			
+ 			
+ --->	@Entity
+ 		Annotates the specified class as a Entity class
+ 		for entity class Spring framework will automatically create table
+
+ --->   @Id
+ 		Annotates the specified attribute as a primary column
+ 		Every Entity class must have a @Id (Primary key)
+ 		
+ --->   @Column
+		By default each Attribute is considered as a column 
+		with name = attributeName(auto generated)
+			 nullable = true,
+		     unique = false
+		
+		We can set the properties of the column by @Column
+		
+		it is used to add properties to the column
+		1. name/value
+		2. Nullable
+		3. Unique
+ 		
+ ---> 	@Table
+ 		By default Table properties will be set automatically
+ 		name = entity class name
+ 		and no unique Constraints
+ 			
+ 		We can also set table properties
+ 			1. name
+ 			2. uniqueConstraints
+ 		
+ 		We can set any number of individual uniqueConstraint
+ 		* @Table(name="Any_Name", 
+ 		         uniqueConstraints = {@UniqueConstraint(columnNames = "column1"),
+ 		 							  @UniqueConstraint(columnNames = "column2")})
+ 		 							  
+ 		We can set composite unique
+ 		* @Table(name="Optional",
+ 		         uniqueCostraints = {@UniqueConstraint(columnNames = {"column1", "column2"})})
+
+ --->  @IdClass()
+ --->		Students is also a bean class
+ 		having getters and setters for all the attribute
+ 		
+ 		In order to check the h2 database visit : http://localhost:9090/h2-console
+ 		
+ 		In order to perform CRUD Operations
+ 			create StudentsRepository(Interface) extends CrudRepository
+ 			
+ 		In order to communicate with the client Create StudentController Class
+ 			And generate API to perform each task
+ 			
+ 		

@@ -1,0 +1,6 @@
+Path variables.
+	by path variable we can receive input from the web
+	
+@RequestMapping("url/{arg}")
+ so the argument should be enclosed with Braces
+

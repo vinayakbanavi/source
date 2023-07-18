@@ -1,0 +1,9 @@
+Writing in to the fileUsing buffered writer,write will start writing in the same line from last cursor pointDoesnt add any spacing for each write statement
+bufferedWriter has a function to create newLine()will insert the new line and content start writing in the newly produced line
+As we are used append = true the following content will be added in successive execution
+Writing in to the fileUsing buffered writer,write will start writing in the same line from last cursor pointDoesnt add any spacing for each write statement
+bufferedWriter has a function to create newLine()will insert the new line and content start writing in the newly produced line
+As we are used append = true the following content will be added in successive execution
+Writing in to the fileUsing buffered writer,write will start writing in the same line from last cursor pointDoesnt add any spacing for each write statement
+bufferedWriter has a function to create newLine()will insert the new line and content start writing in the newly produced line
+As we are used append = true the following content will be added in successive execution

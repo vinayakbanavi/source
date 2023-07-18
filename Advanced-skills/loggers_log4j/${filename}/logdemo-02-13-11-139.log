@@ -1,0 +1,66 @@
+02:04:40.390 [main] INFO  pack2.TestSingleton - test case started
+02:04:40.395 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:04:40.687 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:04:40.720 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:04:40.721 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:04:40.722 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object
+02:06:13.352 [main] INFO  pack2.TestSingleton - test case started
+02:06:13.356 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:06:13.357 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:06:13.358 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:06:13.358 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:06:13.359 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object
+02:06:20.063 [main] INFO  pack2.TestSingleton - test case started
+02:06:20.068 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:06:20.069 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:06:20.069 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:06:20.070 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:06:20.070 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object
+02:08:18.879 [main] INFO  pack2.TestSingleton - test case started
+02:08:18.900 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:08:18.903 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:08:18.904 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:08:18.906 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:08:18.907 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object
+02:08:21.534 [main] INFO  pack2.TestSingleton - test case started
+02:08:21.540 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:08:21.542 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:08:21.544 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:08:21.547 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:08:21.547 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object
+02:08:22.880 [main] INFO  pack2.TestSingleton - test case started
+02:08:22.899 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:08:22.901 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:08:22.902 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:08:22.902 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:08:22.903 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object
+02:08:24.457 [main] INFO  pack2.TestSingleton - test case started
+02:08:24.464 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:08:24.510 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:08:24.510 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:08:24.511 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:08:24.511 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object
+02:08:25.722 [main] INFO  pack2.TestSingleton - test case started
+02:08:25.739 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:08:25.740 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:08:25.741 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:08:25.741 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:08:25.741 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object
+02:10:36.894 [main] INFO  pack2.TestSingleton - test case started
+02:10:36.913 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:10:36.915 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:10:36.915 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:10:36.916 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:10:36.916 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object
+02:11:39.062 [main] INFO  pack2.TestSingleton - test case started
+02:11:39.078 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:11:39.079 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:11:39.080 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:11:39.081 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:11:39.081 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object
+02:12:24.206 [main] INFO  pack2.TestSingleton - test case started
+02:12:24.217 [main] INFO  pack2.TestSingleton - Requesting Singleton instance for obj1
+02:12:24.219 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:12:24.219 [main] INFO  pack2.TestSingleton - requesting Singleton instance for obj2
+02:12:24.219 [main] INFO  pack2.Singleton - From SingleTon instance requested
+02:12:24.219 [main] INFO  pack2.TestSingleton - checking whether obj1 and obj2 refer to the same object

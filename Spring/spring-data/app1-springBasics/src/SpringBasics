@@ -1,0 +1,75 @@
+Spring Basics
+
+Spring boot is a application type.
+maven / gradle are tool plugins
+tool plugins :	Spring Boot provides build tool plugins for Maven and Gradle. 
+				The plugins offer a variety of features, including the packaging of executable jars. 
+				This section provides more details on both plugins as well as some help should you need to extend an unsupported build system
+
+Spring is made up of many modules
+
+1. IoC : Inversion Of Control
+	   : The IoC pattern is a way of reversing the traditional approach to create and initialize Java objects.
+	     Rather than create objects directly within their code, developers ask a third party, 
+	     such as the Spring container or the Java EE context, to provide instances instead.
+	     
+	     programmer not concentrating on Object creation, directly using the Objects Created by Third party Application like Spring Boot
+	     Spring Boot will take care of Creating Object, Addition of meta data and maintaining it after the usage.
+	     
+	     pom.xml : for project properties
+	     
+--->    Required Dependencies 
+	     <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+	
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-core</artifactId>
+		    <version>6.0.7</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>6.0.7</version>
+		</dependency>
+		
+--->	we need one more xml file
+		Name can be any name
+		beans.xml
+		
+--->	Configurable properties
+		
+		<?xml version="1.0" encoding="UTF-8"?>
+
+		<beans xmlns="http://www.springframework.org/schema/beans"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+			xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+			xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+			xmlns:task="http://www.springframework.org/schema/task"
+			xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+		</beans>
+		
+		
+		storing, setting , injecting
+		
+--->	Dependency Injection : injecting dependency into the Object
+		
+		Injection can be Done through
+		1. Setter Injection : 
+			- Injecting Data through setter methods of bean class
+			
+			
+		2. Constructor Injection
+		    - Injecting Data through Constructor Of bean class
+		    
+		3. Interface Injection
+		
+		Spring supports only Setter Injection And Constructor Injection.
+		
+---> 	default scope of a bean is a Singleton
+		
+		we can alter the scope in bean 
+		1. scope = "singleton"
+		    : One Object for entire execution
+		1. scope = "prototype" 
+			: for every getBean method new object.

@@ -1,0 +1,3 @@
+Writing in to the file using BufferWriterBy default the content writing will start from the last cursor locationwrite the content in the same line
+BufferedWriter is having newLine() which will create the new lineContent writing start from the next line
+newLine() can be used to create new line whenever necessarycontent will write in the new line

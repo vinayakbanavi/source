@@ -1,0 +1,119 @@
+ 	Loggers : are the records of information, error or warnings
+ 	
+ 	In the following test case we are using print() method to check what's happening in the execution
+ 	
+ 	But using print() in the application development is not a good practice
+ 	
+ 	By using System.out.print()
+ 	1. prints the specified content in the console.
+ 	   Developer gets to understand what's happening in the flow
+ 	   Only available once after the execution
+ 	   Can not store this flow into the file by default
+ 	   
+ 	1. SOP needs console to display message, SOP not able to send this log into files/database
+ 	
+ 	2. SOP contains Synchronized block to display the data, 
+ 	   Which is time consuming, expensive, heavyWeight
+ 	   
+ 	3. Too many SOP will reduce performance
+ 	
+ 	4. SOP will be available in Developer console only not to the User of the application
+ 	
+ 	To over come above drawbacks we use loggers
+ 	
+ 	Logging Frameworks:
+ 	1. java.util.Logging    (built in)
+ 	2. Log4j 
+ 	3. LogBack
+ 	4. Commons Logging
+ 	
+ 	Advantages :
+ 	1. Quick Debugging
+ 	2. Problem diagnosis
+ 	3. Easy Maintenance
+ 	
+ 	DisAdvantages :
+ 	1. Extra Code
+ 	
+ 	
+    Log4j :
+     
+	Reliable, fast and flexible framework written in java.
+	
+	Features : 
+	- not synchronized (Allow multiThreading)
+	- optimized to improve application process
+	- environment to send log messages to  more than one output appenders
+	- multiple levels to generate messages 
+	--> ALL << TRACE << DEBUG << INFO << WARN << ERROR << FATAL
+	
+	Components ( objects ) :
+	
+	
+
+									 Level
+
+									 LogManager				   Destination
+																
+	java application    ------->     Logger         ------->   Appender 
+
+									 Filter					   Layout
+
+									 ObjectRender
+
+
+	
+	Logger : Responsible to get logging messages from java
+	
+	Appender : Send message to destination
+			   Each Appender must have Destination to send logging messages
+			   
+			   Type of Appenders
+			   
+			   1. FileAppenders : 
+				 	FileRolling Appenders
+				 	Daily FileRolling Appenders
+				 	
+			   2. Console Appenders :
+				 
+			   3. JDBC Appenders :
+				 
+			   4. SysLog Appenders :
+				 
+			   5. SMTP Appenders :
+			   
+	Layout : Format logging messages in different styles 
+			 Appender internally uses Layout before sending log messages to Destination
+				 
+			 
+			 level chosen will able to log all other in the right side
+			 ALL is having highest scope will log all other levels
+			 ---------->
+	Level : ALL >> TRACE >> DEBUG >> INFO >> WARN >> ERROR >>  FATAL
+	
+	LogManager : Central component, used for configuration
+	
+	Filter : Filters the logs based on the Level
+			 Analyze logging information and decide whether to send that log or not
+			 
+	ObjectRender : Contains the Object representation in the string format
+				   Used by the layout internally.
+			 
+			 
+	Implementation :
+	
+	Spring web will provide  log4j dependency by default 
+	for other projects we must download libraries (to the project path)
+	download > extract > choose classpath (api, core).
+	
+	if configuration file cannot be located, configuration will be set to default
+	default destination = console
+	default level = error
+	
+	Logger instantiation to use built in functions
+	
+	Logger logger = LogManager.getLogger(/*Source.class */);
+	
+	using level :
+	
+	logger.info("information level");

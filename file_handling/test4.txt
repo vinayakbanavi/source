@@ -1,0 +1,6 @@
+싗write method is overloaded with int so we can directly supply int
+but we dont get the same number into the file
+it will be treated as a hashCode value
+but we get the corresponding character for the given hashcode
+Developed using try with resource
+if Resources created in the try parenthesis implements Closeable they will close automatically

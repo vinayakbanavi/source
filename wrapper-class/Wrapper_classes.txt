@@ -1,0 +1,27 @@
+	Wrapper classes
+	
+	1. Wrapper classes are avaialble in java.lang package we dont need to import explicitly
+	2. All the wrapper classes are final we cannot develop subclasses to the wrapper classes
+	3. All Wrapper classes implementing Serializable interface (because of this can write into System files)
+	4. All the wrapper class implementing Comparable interface (because of this wrapper Objects are eligible for sorting)
+	5. In all the wrapper classes toString() is overrided (because of this we can print Object content through reference)
+	6. In every Wrapper class hashCode() and equals() method also overrided (because of this duplicates can be identified by the collection frameWork)
+	7. except  Character wrapper class All other supports String to primitive.
+
+	8. Need of wrapper classes
+		* Wrapping(Boxing) primitive content into Object.
+		* unWrapping getting primitive value from the object
+		* Converting primitive to String
+		* Converting String to primitive (except Character)
+
+	For every primitive data type there is a wrapper class
+
+		Primitive Data type        Wrapper Class
+	1.	byte				Byte
+	2.	short				Short
+	3.	int				Integer
+	4.      long             	        Long
+	5.      float                           Float
+	6.	double				Double
+	7.	char				Character
+	8.	boolean				Boolean
