@@ -6,18 +6,17 @@ class G
 		System.out.println("main begin" + i);
 		if (false)
 		{
-           System.out.println("if block");
+           		System.out.println("if block");
 		}
-
 		else
 		{    
 			i = 10;
-		    System.out.println("else block");
-		    System.out.println("else block");
-		    System.out.println("else block");
-		    System.out.println("else block");
-		    System.out.println("else block" + i);
+			System.out.println("else block");
+			System.out.println("else block");
+			System.out.println("else block");
+			System.out.println("else block");
+			System.out.println("else block" + i);
 		}
-        System.out.println("main end" + i);
+        	System.out.println("main end" + i);
 	}
 }
