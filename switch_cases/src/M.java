@@ -7,13 +7,12 @@ class M
 		final int j = 10;
 		switch (i)
 		{
-		case 1:
-			System.out.println("from case 1");
-	     	break;
-		case j:
-			System.out.println("from case 2");
-		    break;
-		
+			case 1:
+				System.out.println("from case 1");
+				break;
+			case j:
+				System.out.println("from case 2");
+				break;
 		}
 		System.out.println("main end");
 	}
