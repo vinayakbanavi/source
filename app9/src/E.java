@@ -8,9 +8,9 @@ class E
 			System.out.println("if block");
 		}
 		else if(true)                            //if block inside the body of the else block
-			{
-				System.out.println("if2");
-			}
+		{
+			System.out.println("if2");
+		}
 
 		System.out.println("main end");
 	}
