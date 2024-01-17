@@ -19,7 +19,7 @@ class H
 				System.out.println("from case 4");
 			    break;
 		    default:
-				System.out.println("from case 54");
+				System.out.println("from default case");
 			    break;
 		}
 		System.out.println("main end");
