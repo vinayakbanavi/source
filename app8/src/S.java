@@ -4,12 +4,12 @@ class S
 	{
 		System.out.println("main begin");
 		if (true)
-		if (false)
-		System.out.println("if2");
+			if (false)
+				System.out.println("if2");
+			else
+				System.out.println("else2");
 		else
-		System.out.println("else2");
-		else
-		System.out.println("else1 block");
+			System.out.println("else1 block");
 		System.out.println("main end");
 	}
 }
