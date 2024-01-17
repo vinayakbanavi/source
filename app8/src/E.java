@@ -5,18 +5,17 @@ class E
 		System.out.println("main begin");
 		if (false)
 		{
-           System.out.println("if block");
+           		System.out.println("if block");
 		}
-
 		else
 		{    
 			int i = 10;
-		    System.out.println("else block");
-		    System.out.println("else block");
-		    System.out.println("else block");
-		    System.out.println("else block");
-		    System.out.println("else block" + i);
+			System.out.println("else block");
+			System.out.println("else block");
+			System.out.println("else block");
+			System.out.println("else block");
+			System.out.println("else block" + i);
 		}
-        System.out.println("main end");
+        	System.out.println("main end");
 	}
 }
