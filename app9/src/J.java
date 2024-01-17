@@ -8,13 +8,13 @@ class J
 			System.out.println("if block");
 		}
 		else if (true)
-			{
-				System.out.println("if2");
-			}
-			else
-			{
-				System.out.println("else 2");
-			}
+		{
+			System.out.println("if2");
+		}
+		else
+		{
+			System.out.println("else 2");
+		}
 		System.out.println("main end");
 	}
 }
