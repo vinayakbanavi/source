@@ -5,13 +5,13 @@ class D
 		System.out.println("main begin");
 		if (true)
 		{
-            System.out.println("if1 begin");
-		    if(true)
-			   {
-			      System.out.println("if2");
-			   }
+        		System.out.println("if1 begin");
+		    	if(true)
+			{
+				System.out.println("if2");
+			}
 			System.out.println("if1 end");
 		}
-        System.out.println("main end");
+        	System.out.println("main end");
 	}
 }
