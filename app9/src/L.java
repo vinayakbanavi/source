@@ -15,7 +15,7 @@ class L
 				System.out.println("if2");
 			}
 			else if (true)
-			System.out.println("if3");
+				System.out.println("if3");
 			System.out.println("else end");
 		}
 		System.out.println("main end");
