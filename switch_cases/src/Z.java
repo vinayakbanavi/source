@@ -4,12 +4,12 @@ class Z
 	{
 		switch ("hii")
 		{
-		case "hii":
-			System.out.println("hii");
-			break;
-		case "hello":
-			System.out.println("hello");
-			break;
+			case "hii":
+				System.out.println("hii");
+				break;
+			case "hello":
+				System.out.println("hello");
+				break;
 		}
 	}
 }
