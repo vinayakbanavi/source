@@ -6,7 +6,7 @@ class J
 
 		if (false);                            
 		if(false)                        
-	    System.out.println("if2");  
+	    		System.out.println("if2");  
        
 		System.out.println("main end");
 	}
