@@ -5,11 +5,11 @@ class T
 		System.out.println("main begin");
 		if (true);
 		if (false)
-		System.out.println("if2");
+			System.out.println("if2");
 		else
-		System.out.println("else2");
+			System.out.println("else2");
 		else                                        //ERROR - ELSE WITHOUT IF
-		System.out.println("else1 block");
+			System.out.println("else1 block");
 		System.out.println("main end");
 	}
 }
