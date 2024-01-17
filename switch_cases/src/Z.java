@@ -6,17 +6,9 @@ class Z
 		{
 		case "hii":
 			System.out.println("hii");
-			System.out.println("from 1");
-			System.out.println("from 1");
-			System.out.println("from 1");
-			System.out.println("from 1");
 			break;
 		case "hello":
 			System.out.println("hello");
-			System.out.println("from 1");
-			System.out.println("from 1");
-			System.out.println("from 1");
-			System.out.println("from 1");
 			break;
 		}
 	}
