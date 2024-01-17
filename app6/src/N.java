@@ -13,3 +13,4 @@ class N
 /*
 if block
 main end 10
+*/
