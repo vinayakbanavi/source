@@ -4,21 +4,19 @@ class N
 	{
 		System.out.println("main begin");
 		if (true)
-           if (true)
-           {
-			   System.out.println("if2");
-           }
-		   else
+			if (true)
 			{
-			   System.out.println("else2");
+				System.out.println("if2");
 			}
-
+			else
+			{
+				System.out.println("else2");
+			}
 		else
 		{    
-		   
-		    System.out.println("else1 block");
+			System.out.println("else1 block");
 		}
-        System.out.println("main end");
+		System.out.println("main end");
 	}
 }
 
