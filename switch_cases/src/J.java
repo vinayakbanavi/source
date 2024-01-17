@@ -10,7 +10,7 @@ class J
 				System.out.println("from case 100");
 				break;
 			default:
-				System.out.println("from case 18");
+				System.out.println("from default case");
 			    break;
 			case 1:
 				System.out.println("from case 1");
@@ -19,7 +19,7 @@ class J
 				System.out.println("from case 3");
 			    break;
 			default:	
-				System.out.println("from case 19");
+				System.out.println("from default case");
 			    break;
 			case 4:
 				System.out.println("from case 4");
