@@ -5,13 +5,12 @@ class D
 		System.out.println("main begin");
 		if (!true)
 		{
-           System.out.println("if block");
+           		System.out.println("if block");
 		}
-
 		else
 		{
 			System.out.println("else block");
 		}
-        System.out.println("main end");
+        	System.out.println("main end");
 	}
 }
