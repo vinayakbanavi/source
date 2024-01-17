@@ -5,24 +5,22 @@ class L
 		System.out.println("main begin");
 		if (true)
 		{
-           System.out.println("if1 begin");
-           if (true)
-           {
-			   System.out.println("if2");
-           }
-		   else
+			System.out.println("if1 begin");
+			if (true)
 			{
-			   System.out.println("else2");
+				System.out.println("if2");
 			}
-		   System.out.println("if1 end");
+			else
+			{
+				System.out.println("else2");
+			}
+			System.out.println("if1 end");
 		}
-
 		else
 		{    
-		   
-		    System.out.println("else1 block");
+			System.out.println("else1 block");
 		}
-        System.out.println("main end");
+		System.out.println("main end");
 	}
 }
 
