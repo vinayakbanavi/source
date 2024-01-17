@@ -9,7 +9,7 @@ class D
 	D()
 	{
 		i = 10;
-		System.out.println("D()");
+		System.out.println("Inside Constructor");
 	}
 
 	public static void main(String[] args) 
