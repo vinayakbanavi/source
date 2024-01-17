@@ -4,7 +4,7 @@ class J
 	{
 		System.out.println("main begin");
 
-		if (false);                            
+		if(false);                            
 		if(false)                        
 	    		System.out.println("if2");  
        
