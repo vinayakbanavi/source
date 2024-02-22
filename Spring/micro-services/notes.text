@@ -13,6 +13,7 @@ app1 ----------------------> app2
            resttemplate
             
 -----------------------------------------------
+Open feign Example
 
 app3  - 
        dependencies 
@@ -24,9 +25,10 @@ app4  -
             spring web
 
 app1 ----------------------> app2
-           feign client
+        feign client('url')
 
            -----------------------------------------------
+Open feign Example with eureka
 
 app5  -
        dependencies 
@@ -35,17 +37,32 @@ app5  -
 app6  -
        dependencies 
             spring web
+            eureka discovery client
+            open feign
 
 app7  - 
        dependencies 
             spring web
 
+
+
+app6 ---------------------------------> app7
+    openfeign(service name from registry)
+             
+
 -----------------------------------------------
+Open feign Example with eureka and Load balancer 
+
 app8  - 
 app9  - 
 app10 -
+
+-----------------------------------------------
+
 app11 - 
 app12 -
+app13 -
+app14 -
 
 app1, app2 --> Rest Template
 app3, app4 --> OpenFeign
