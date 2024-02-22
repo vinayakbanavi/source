@@ -1,20 +1,46 @@
+----------------------------------------------
+RestTemplate Example
 
-RestTemplate
 app1  -
         dependencies 
             spring web
 
 app2  - 
         dependencies 
+            spring web 
 
-
-
+app1 ----------------------> app2
+           resttemplate
+            
+-----------------------------------------------
 
 app3  - 
+       dependencies 
+            spring web
+            open feign
+
 app4  - 
+       dependencies 
+            spring web
+
+app1 ----------------------> app2
+           feign client
+
+           -----------------------------------------------
+
 app5  -
-app6  - 
+       dependencies 
+            eureka server
+
+app6  -
+       dependencies 
+            spring web
+
 app7  - 
+       dependencies 
+            spring web
+
+-----------------------------------------------
 app8  - 
 app9  - 
 app10 -
